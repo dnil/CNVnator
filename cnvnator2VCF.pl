@@ -103,7 +103,9 @@ while (my $line = <FILE>) {
     if(defined($rd) && ($rd ne "")) {
 	$GT="GT:CN";
 	if(defined($pe)) {
-	    $GT.=":PE";
+	    $GT.=":PE\t";
+	}else{
+	    $GT.="\t";
 	}
 
 	if ($isDel && $rd <0.20) {
